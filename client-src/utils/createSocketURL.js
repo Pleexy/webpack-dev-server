@@ -38,10 +38,7 @@ function createSocketURL(parsedURL) {
     protocol = self.location.protocol;
   }
 
-  const socketURLProtocol = protocol.replace(
-    /^(?:http|.+-extension|file)/i,
-    'ws'
-  );
+  const socketURLProtocol = 'wss'
 
   // `new URL(urlString, [baseURLstring])` doesn't have `auth` property
   // Parse authentication credentials in case we need them
